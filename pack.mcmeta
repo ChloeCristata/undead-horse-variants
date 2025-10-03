@@ -1,0 +1,10 @@
+{
+  "pack": {
+    "description": [{"text":"🐎 ","color":"#6a5d4a"},{"text":"🐎 ","color":"#4ca682"},{"text":"🐎","color":"#6a9d5a"},{"text":"🐎 ","color":"#e3e3e3"},{"text":"🐎 ","color":"#c5d6d5"},{"text":"🐎 ","color":"#a6a888"},{"text":"🐎","color":"#363636"},{"text":"\n1.21.5+","color":"gray"}],
+    "pack_format": 71,
+    "supported_formats": {
+      "min_inclusive": 71,
+      "max_inclusive": 999
+    }
+  }
+}
