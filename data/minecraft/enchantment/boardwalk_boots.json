@@ -1,0 +1,88 @@
+{
+  "primary_items": [],
+  "weight": 1,
+  "description": "Boardwalk Boots",
+  "anvil_cost": 0,
+  "effects": {
+    "minecraft:location_changed": [
+      {
+        "requirements": {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "flags": {
+              "is_on_ground": true
+            }
+          }
+        },
+        "effect": {
+          "type": "minecraft:replace_disk",
+          "block_state": {
+            "type": "minecraft:simple_state_provider",
+            "state": {
+              "Name": "minecraft:spruce_slab",
+              "Properties": {
+                "type": "top",
+                "waterlogged": "true"
+              }
+            }
+          },
+          "height": 1,
+          "offset": [
+            0,
+            -1,
+            0
+          ],
+          "predicate": {
+            "type": "minecraft:all_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_block_tag",
+                "offset": [
+                  0,
+                  1,
+                  0
+                ],
+                "tag": "minecraft:air"
+              },
+              {
+                "type": "minecraft:matching_blocks",
+                "blocks": "minecraft:water"
+              },
+              {
+                "type": "minecraft:matching_fluids",
+                "fluids": "minecraft:water"
+              },
+              {
+                "type": "minecraft:unobstructed"
+              }
+            ]
+          },
+          "radius": 3,
+          "trigger_game_event": "minecraft:block_place"
+        }
+      },
+      {
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "uhv:boardwalk_boots2"
+        }
+      }
+    ]
+  },
+  "max_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "max_level": 1,
+  "min_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "slots": [
+    "feet"
+  ],
+  "supported_items": [
+    "minecraft:golden_boots"
+  ]
+}
