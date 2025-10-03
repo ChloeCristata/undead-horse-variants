@@ -1,0 +1,1 @@
+execute if score toggle uhv_enabled matches 1 run function uhv:run_if_enabled_1t

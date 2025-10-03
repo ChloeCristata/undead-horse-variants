@@ -1,0 +1,24 @@
+{
+  "condition": "minecraft:inverted",
+  "term": {
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "vehicle": {
+        "type": "minecraft:zombie_horse",
+        "slots": {
+          "armor.feet": {
+            "items": "minecraft:golden_boots",
+            "predicates": {
+              "minecraft:enchantments": [
+                {
+                  "enchantments": "boardwalk_boots"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

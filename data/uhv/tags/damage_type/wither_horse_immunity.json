@@ -1,0 +1,7 @@
+{
+  "values": [
+    "minecraft:wither",
+    "minecraft:wither_skull",
+    "#minecraft:is_fire"
+  ]
+}

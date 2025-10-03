@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "lightning_strike": {
+      "trigger": "minecraft:lightning_strike"
+    }
+  },
+  "rewards": {
+    "function": "uhv:debug_lightning_tracker"
+  }
+}

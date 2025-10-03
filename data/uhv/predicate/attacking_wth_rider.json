@@ -1,0 +1,34 @@
+[
+  {
+    "condition": "minecraft:all_of",
+    "terms": [
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "targeted_entity": {
+            "type": [
+              "minecraft:player"
+            ],
+            "vehicle": {
+              "type": "minecraft:skeleton_horse",
+              "team": "wither_horse"
+            }
+          }
+        }
+      },
+      {
+        "condition": "minecraft:inverted",
+        "term": {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "effects": {
+              "minecraft:wither": {}
+            }
+          }
+        }
+      }
+    ]
+  }
+]

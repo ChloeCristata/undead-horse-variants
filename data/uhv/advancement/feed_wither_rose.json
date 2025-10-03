@@ -1,0 +1,23 @@
+{
+  "criteria": {
+    "feed_wither_rose": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:wither_rose"
+          ]
+        },
+        "entity": {
+          "type": [
+            "minecraft:interaction"
+          ],
+          "nbt": "{Tags:[\"interact_uhv_wth\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "uhv:feed_wither_rose"
+  }
+}

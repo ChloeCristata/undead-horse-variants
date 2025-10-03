@@ -1,0 +1,31 @@
+{
+  "criteria": {
+    "wither_trap": {
+      "trigger": "minecraft:lightning_strike",
+      "conditions": {
+        "lightning": [
+          {
+            "condition": "minecraft:weather_check",
+            "thundering": true
+          },
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "structures": [
+                "minecraft:ruined_portal",
+                "minecraft:ruined_portal_desert",
+                "minecraft:ruined_portal_jungle",
+                "minecraft:ruined_portal_mountain",
+                "minecraft:ruined_portal_ocean",
+                "minecraft:ruined_portal_swamp"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "uhv:set_trap/wither"
+  }
+}

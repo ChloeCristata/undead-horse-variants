@@ -1,0 +1,3 @@
+tellraw @a ""
+tellraw @a ["",{bold:true,text:"",extra:[{color:"#9DC890",text:"> "},{color:"#6A9D5A",text:"UVH:"}]},"\n\n",{color:"#f2a89b",underlined:true,click_event:{action:"run_command",command:"/function uhv:run_uhv_uninstaller"},text:"Click here to uninstall ",extra:[{bold:true,text:"Undead Horse Variants."}]},"\n\n",{color:"red",bold:true,text:"WARNING"},"\n",{color:"#e3e3e3",text:"Uninstalling this datapack will remove ",extra:[{bold:true,text:"all"}," traces of it from this world."]},"\n",{color:"#e3e3e3",text:"This means that any and all effects that this pack has had will be ",extra:[{bold:true,text:"permanently reverted."}]}]
+tellraw @a ""

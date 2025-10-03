@@ -1,0 +1,27 @@
+{
+  "criteria": {
+    "riding_horse": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": {
+          "vehicle": {
+            "nbt": "{Tags:[\"able_to_swim\"]}",
+            "location": {
+              "block": {
+                "blocks": "minecraft:water"
+              }
+            },
+            "movement": {
+              "horizontal_speed": {
+                "min": 1
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "uhv:in_water/swim"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "condition": "minecraft:any_of",
+  "terms": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type_specific": {
+          "type": "minecraft:player",
+          "looking_at": {
+            "team": "drowned_horse"
+          }
+        },
+        "equipment": {
+          "mainhand": {
+            "items": "minecraft:sponge"
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type_specific": {
+          "type": "minecraft:player",
+          "looking_at": {
+            "team": "zombie_horse"
+          }
+        },
+        "equipment": {
+          "mainhand": {
+            "items": "minecraft:sponge"
+          }
+        }
+      }
+    }
+  ]
+}

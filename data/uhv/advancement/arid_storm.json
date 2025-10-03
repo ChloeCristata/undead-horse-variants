@@ -1,0 +1,37 @@
+{
+  "criteria": {
+    "arid_storm": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:weather_check",
+            "thundering": true
+          },
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "biomes": [
+                "minecraft:desert",
+                "minecraft:savanna",
+                "minecraft:savanna_plateau",
+                "minecraft:windswept_savanna",
+                "minecraft:badlands",
+                "minecraft:eroded_badlands",
+                "minecraft:wooded_badlands"
+              ],
+              "can_see_sky": true
+            }
+          },
+          {
+            "condition": "minecraft:random_chance",
+            "chance": 0.0005
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "uhv:arid_storm"
+  }
+}

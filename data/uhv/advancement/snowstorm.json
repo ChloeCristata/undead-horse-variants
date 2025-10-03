@@ -1,0 +1,40 @@
+{
+  "criteria": {
+    "snowstorm": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:weather_check",
+            "thundering": true
+          },
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "biomes": [
+                "minecraft:frozen_river",
+                "minecraft:frozen_ocean",
+                "minecraft:frozen_peaks",
+                "minecraft:snowy_plains",
+                "minecraft:snowy_slopes",
+                "minecraft:ice_spikes",
+                "minecraft:jagged_peaks",
+                "minecraft:grove",
+                "minecraft:snowy_taiga",
+                "minecraft:snowy_beach"
+              ],
+              "can_see_sky": true
+            }
+          },
+          {
+            "condition": "minecraft:random_chance",
+            "chance": 0.001
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "uhv:snowstorm"
+  }
+}

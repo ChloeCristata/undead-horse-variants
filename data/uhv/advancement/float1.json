@@ -1,0 +1,42 @@
+{
+  "criteria": {
+    "riding_horse": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "vehicle": {
+            "nbt": "{Tags:[\"able_to_swim\"]}",
+            "location": {
+              "block": {
+                "blocks": "minecraft:water"
+              }
+            },
+            "movement": {
+              "horizontal_speed": 0
+            }
+          }
+        }
+      }
+    },
+    "no_input": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": {
+          "type_specific": {
+            "type": "minecraft:player",
+            "input": {
+              "forward": false,
+              "backward": false,
+              "left": false,
+              "right": false,
+              "jump": false
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "uhv:in_water/float1"
+  }
+}

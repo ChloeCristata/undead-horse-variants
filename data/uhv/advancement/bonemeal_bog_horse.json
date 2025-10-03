@@ -1,0 +1,23 @@
+{
+  "criteria": {
+    "bonemeal_bog_horse": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:bone_meal"
+          ]
+        },
+        "entity": {
+          "type": [
+            "minecraft:interaction"
+          ],
+          "nbt": "{Tags:[\"interact_uhv_shorn\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "uhv:bonemeal_bog_horse"
+  }
+}

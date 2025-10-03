@@ -1,0 +1,55 @@
+{
+  "criteria": {
+    "drowned_trap": {
+      "trigger": "minecraft:lightning_strike",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_scores",
+            "entity": "this",
+            "scores": {
+              "current_difficulty": {
+                "min": 0,
+                "max": 1
+              }
+            }
+          }
+        ],
+        "lightning": [
+          {
+            "condition": "minecraft:weather_check",
+            "thundering": true
+          },
+          {
+            "condition": "minecraft:random_chance",
+            "chance": 0.01125
+          },
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "biomes": [
+                "minecraft:ocean",
+                "minecraft:warm_ocean",
+                "minecraft:lukewarm_ocean",
+                "minecraft:cold_ocean",
+                "minecraft:frozen_ocean",
+                "minecraft:deep_ocean",
+                "minecraft:deep_lukewarm_ocean",
+                "minecraft:deep_cold_ocean",
+                "minecraft:deep_frozen_ocean",
+                "minecraft:river",
+                "minecraft:frozen_river",
+                "minecraft:beach",
+                "minecraft:snowy_beach",
+                "minecraft:stony_shore"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "uhv:set_trap/drowned"
+  }
+}
