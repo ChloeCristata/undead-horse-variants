@@ -36,6 +36,13 @@
                   "scores": {
                     "target_held_sponge": 1
                   }
+                },
+                {
+                  "condition": "minecraft:entity_scores",
+                  "entity": "this",
+                  "scores": {
+                    "target_held_carrot": 1
+                  }
                 }
               ]
             }

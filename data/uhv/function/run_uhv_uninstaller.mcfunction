@@ -10,10 +10,12 @@ scoreboard players reset @e[type=#uhv:undead_horses] husk_counter
 scoreboard players reset @e[type=#uhv:undead_horses] stray_counter
 scoreboard players reset @e[type=#uhv:undead_horses] bog_counter
 scoreboard players reset @e[type=#uhv:undead_horses] wth_counter
+scoreboard players reset @e[type=#uhv:undead_horses] cure_counter
 scoreboard players reset @a target_bog
 scoreboard players reset @a target_shorn
 scoreboard players reset @a target_held_rose
 scoreboard players reset @a target_held_sponge
+scoreboard players reset @a target_held_carrot
 
 scoreboard objectives remove current_difficulty
 scoreboard objectives remove uhv_pos_y
@@ -23,10 +25,12 @@ scoreboard objectives remove husk_counter
 scoreboard objectives remove stray_counter
 scoreboard objectives remove bog_counter
 scoreboard objectives remove wth_counter
+scoreboard objectives remove cure_counter
 scoreboard objectives remove target_bog
 scoreboard objectives remove target_shorn
 scoreboard objectives remove target_held_rose
 scoreboard objectives remove target_held_sponge
+scoreboard objectives remove target_held_carrot
 
 scoreboard players reset toggle uhv_snowstorms
 scoreboard objectives remove uhv_snowstorms
@@ -47,6 +51,16 @@ tag @e[type=#uhv:fleshy_horses] remove able_to_swim
 
 scoreboard players reset toggle uhv_bonuses
 scoreboard objectives remove uhv_bonuses
+
+scoreboard players reset toggle spawn_uhv_horses
+scoreboard objectives remove spawn_uhv_horses
+scoreboard objectives remove spawn_butcher_animals
+
+scoreboard players reset toggle burn_uhv_horses
+scoreboard objectives remove burn_uhv_horses
+
+kill @e[type=marker,tag=underwater_ruins]
+kill @e[type=marker,tag=zombie_village]
 
 scoreboard players reset toggle uhv_attribute_randomizer
 scoreboard objectives remove uhv_attribute_randomizer
@@ -97,6 +111,7 @@ advancement revoke @a only uhv:shear_bog_horse
 advancement revoke @a only uhv:bonemeal_bog_horse
 advancement revoke @a only uhv:feed_wither_rose
 advancement revoke @a only uhv:sponge_your_horse
+advancement revoke @a only uhv:cure_zombie_horse
 advancement revoke @a only uhv:snowstorm
 advancement revoke @a only uhv:arid_storm
 advancement revoke @a only uhv:easy/stray_trap
@@ -139,9 +154,11 @@ team remove shorn_bog_horse
 team remove wither_horse
 
 tag @e[type=#uhv:undead_horses] remove uhv_tracker
-tag @e[type=#uhv:undead_horses] remove uhv_interactable
-tag @e[type=#uhv:undead_horses] remove uhv_trap
+tag @e[type=#uhv:undead_horses] remove uhv_non_interactable
+tag @e[type=zombie_horse] remove from_zombie_village
+tag @e[type=zombie_horse] remove from_underwater_ruins
 tag @e[type=#uhv:undead_horses] remove from_uhv_trap
+tag @e[type=#uhv:undead_horses] remove uhv_trap
 tag @e[type=skeleton_horse] remove vanilla_trap
 tag @e[type=skeleton_horse] remove stray_horse_trap
 tag @e[type=skeleton_horse] remove bogged_horse_trap
@@ -157,6 +174,18 @@ tag @a remove hold_shears
 tag @a remove hold_bonemeal
 tag @a remove hold_wither_rose
 tag @a remove hold_sponge
+tag @a remove hold_golden_carrot
+tag @e[type=horse] remove uhv_tracker
+tag @e[type=horse] remove uhv_non_interactable
+tag @e[type=horse] remove from_zombie_village
+tag @e[type=horse] remove from_underwater_ruins
+tag @e[type=horse] remove from_uhv_trap
+tag @e[type=horse] remove uhv_trap
+tag @e[type=horse] remove zombie_horse_trap
+tag @e[type=horse] remove drowned_horse_trap
+tag @e[type=horse] remove husk_horse_trap
+tag @e[type=horse] remove boardwalk_boots
+tag @e[type=horse] remove cured_from_zombie
 
 
 tellraw @a ""

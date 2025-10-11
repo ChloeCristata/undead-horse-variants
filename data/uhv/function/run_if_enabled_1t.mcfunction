@@ -1,3 +1,23 @@
+	# - UNDEAD HORSES BURN IN DAYLIGHT -
+
+# If "burn_uhv_horses" is enabled, then skeleton and zombie horses will be set on fire if the predicate "uhv:burn_undead" is true.
+# This predicate checks three things. One, if it's daytime. Two, if the sky is visible. Three, the entity's periodic tick. This last part means that the predicate will only be true every 20 ticks (1 second).
+
+execute if score toggle burn_uhv_horses matches 1 as @e[type=#uhv:undead_horses,team=!husk_horse,team=!wither_horse,predicate=uhv:burn_undead] run data modify entity @s Fire set value 160s
+
+
+
+	# - MISC ZOMBIE CURING LOGIC -
+
+# If a zombie, drowned, or husk horse has started being cured into a regular horse (handled by the "cure_zombie_horse" function), finish the conversion.
+
+scoreboard players remove @e[type=zombie_horse,scores={cure_counter=1..6000}] cure_counter 1
+execute as @e[type=zombie_horse,scores={cure_counter=1..6000}] run data modify entity @s TicksFrozen set value 140
+execute as @e[type=zombie_horse,scores={cure_counter=1..6000}] run effect give @s strength 1 1 false
+execute as @e[type=zombie_horse,scores={cure_counter=..1}] at @s run function uhv:zombie_horse_cured
+
+
+
 	# - CONVERT SKELETON TO STRAY -
 
 # If a skeleton horse is in powder snow, 1 will be added to their "stray_counter" objective each tick.
@@ -133,3 +153,4 @@ execute as @e[type=skeleton_horse,team=bogged_horse] at @s if entity @p[tag=hold
 execute as @e[type=skeleton_horse,team=shorn_bog_horse] at @s if entity @p[tag=hold_bonemeal,distance=..5] run rotate @s facing entity @p[tag=hold_bonemeal]
 execute as @e[type=skeleton_horse,team=skeleton_horse] at @s if entity @p[tag=hold_wth_rose,distance=..5] run rotate @s facing entity @p[tag=hold_wth_rose]
 execute as @e[type=zombie_horse,team=!husk_horse] at @s if entity @p[tag=hold_sponge,distance=..5] run rotate @s facing entity @p[tag=hold_sponge]
+execute as @e[type=zombie_horse,predicate=uhv:weakened] at @s if entity @p[tag=hold_golden_carrot,distance=..5] run rotate @s facing entity @p[tag=hold_golden_carrot]

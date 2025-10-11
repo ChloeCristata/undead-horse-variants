@@ -1,0 +1,25 @@
+[
+  {
+    "condition": "minecraft:location_check",
+    "predicate": {
+      "can_see_sky": true
+    }
+  },
+  {
+    "condition": "minecraft:inverted",
+    "term": {
+      "condition": "minecraft:time_check",
+      "value": {
+        "min": 12542,
+        "max": 23460
+      }
+    }
+  },
+  {
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "periodic_tick": 20
+    }
+  }
+]

@@ -90,12 +90,21 @@ If you placed the files in the correct locations but it still isn't working, try
 > **/function uhv:config/gameplay_bonuses**
 > 
 > Toggles whether or not undead horses will receive gameplay bonuses when certain conditions are fulfilled.
-> 
-> _Turning off gameplay bonuses will **not** affect the fire resistance given to wither skeleton horses._
 
-> **/function uhv:config/debugging**
+> **/function uhv:config/spawn_uhv_horses**
 >
-> Toggles debug mode. If enabled, certain information will be logged in chat as well as in scoreboards. This primarily includes lightning strikes and undead horse spawning.
+> Cycles through four options:
+> 
+> 1. Zombie horses, drowned horses, and husk horses spawn in abandoned villages. Drowned horses spawn in underwater ruins.
+> 2. Drowned horses spawn in underwater ruins.
+> 3. Zombie horses, drowned horses, and husk horses spawn in abandoned villages.
+> 4. Undead horses will not spawn in abandoned villages or underwater ruins.
+> 
+> By default, option one is enabled.
+
+> **/function uhv:config/burn_uhv_horses**
+> 
+> Toggles whether or not undead horses will burn in direct daylight. By default, this is toggled OFF.
 
 </details>
 
@@ -134,9 +143,34 @@ If you don't want to change the vanilla weather patterns at all, this feature ca
 - **Stray horses** spawn in snowy areas.
 - And **zombie horses** will spawn anywhere.
 
+_[(Skeleton horse spawning is unchanged, check the wiki for information)](https://minecraft.wiki/w/Skeleton_Horse#Spawning)_
+
 </details>
 
-_[(Skeleton horse spawning is unchanged, check the wiki for information)](https://minecraft.wiki/w/Skeleton_Horse#Spawning)_
+---
+
+**Undead horses are also able to spawn in certain structures.**
+
+_This can be configured using "**/function uhv:config/spawn_uhv_horses**"._
+
+<details>
+<summary>INFO - Spawning</summary>
+
+**Abandoned Villages:**
+
+Per each animal pen/stables generated in an abandoned village, there's a 20% chance for no horses to spawn, a 40% chance for one horse to spawn, and a 40% chance for two horses to spawn.
+
+The horses spawned will be either zombie horses, husk horses, or drowned horses depending on the spawn location.
+
+**Underwater Ruins:**
+
+Underwater ruins can either spawn as small ruins or as large ruins surrounded by smaller ruins. Each of these large ruins has a chance to spawn a drowned horse.
+
+Per each large ruin, there's a 30% chance for no horses to spawn, a 60% chance for one horse to spawn, and a 10% chance for two horses to spawn. If the spawn location isn't underwater, no horses will be spawned.
+
+</details>
+
+---
 
 ## Undead Horse Traps
 
@@ -221,6 +255,16 @@ Feed your horse a wither rose. They'll begin to shake and emit particles. After 
 
 ---
 
+## Curing
+
+Curing a zombie horse and curing a zombie villager involve very similar processes and materials. However, a golden carrot will be required instead of a golden apple if you intend to cure a zombie horse.
+
+First, the zombie horse will need to be weakened. The most convenient way to accomplish this is by using a splash potion of weakness. Next, feed a golden carrot to the horse. Once you do, it'll begin to shake violently, emitting golden particle effects. After 3-5 minutes, the conversion will be completed.
+
+If gameplay bonuses are enabled, all formerly undead horses will be given a level 2 regeneration effect.
+
+---
+
 ## Shearing / Bone Mealing
 
 Using shears, you can harvest the mushrooms & the mossy "tails" which grow on the backs of bogged horses. Unlike with humanoid bogged, this isn't a permanent change! If you ever want to return your bogged horse to their former appearance, using bonemeal will do the trick nicely.
@@ -280,6 +324,14 @@ If you're not a fan of these bonuses, that's fine too: just turn them off by usi
 Doing so will remove _almost_ all gameplay bonuses — however, certain "inherent" abilities will not be removed. These abilities include **wither skeleton horses being immune to fire & withering** as well as **stray horses & skeleton horses being immune to freeze damage.**
 
 </details>
+
+---
+
+## The Sun Is A Deadly Laser
+
+Watch out! Undead aren't a fan of daylight. If exposed to the sun, most types of undead start to burn. This now includes all of the undead horses except for two: husk horses and wither skeleton horses.
+
+If you'd prefer for your beloved steed not to be a galloping fire hazard, worry not: this feature is disabled by default. To enable it, use "**/function uhv:config/burn_uhv_horses**".
 
 ---
 

@@ -23,16 +23,6 @@
           {
             "condition": "minecraft:random_chance",
             "chance": 0.01125
-          },
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "biomes": [
-                "minecraft:mushroom_fields",
-                "minecraft:mangrove_swamp",
-                "minecraft:swamp"
-              ]
-            }
           }
         ]
       }

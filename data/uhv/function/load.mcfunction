@@ -24,10 +24,18 @@ execute unless score toggle uhv_bonuses matches 0 run scoreboard players set tog
 scoreboard objectives add uhv_attribute_randomizer trigger
 execute unless score toggle uhv_attribute_randomizer matches 0 run scoreboard players set toggle uhv_attribute_randomizer 1
 
+scoreboard objectives add spawn_uhv_horses trigger
+scoreboard objectives add spawn_butcher_animals trigger
+execute unless score toggle spawn_uhv_horses matches 0 unless score toggle spawn_uhv_horses matches 2 unless score toggle spawn_uhv_horses matches 3 run scoreboard players set toggle spawn_uhv_horses 1
+
+scoreboard objectives add burn_uhv_horses trigger
+execute unless score toggle burn_uhv_horses matches 1 run scoreboard players set toggle burn_uhv_horses 0
+
 scoreboard objectives add target_bog trigger
 scoreboard objectives add target_shorn trigger
 scoreboard objectives add target_held_rose trigger
 scoreboard objectives add target_held_sponge trigger
+scoreboard objectives add target_held_carrot trigger
 
 advancement revoke @a only uhv:interaction_entities
 advancement revoke @a only uhv:clear_interactions
@@ -36,6 +44,7 @@ advancement revoke @a only uhv:shear_bog_horse
 advancement revoke @a only uhv:bonemeal_bog_horse
 advancement revoke @a only uhv:feed_wither_rose
 advancement revoke @a only uhv:sponge_your_horse
+advancement revoke @a only uhv:cure_zombie_horse
 advancement revoke @a only uhv:snowstorm
 advancement revoke @a only uhv:arid_storm
 advancement revoke @a only uhv:stray_trap
@@ -69,6 +78,9 @@ scoreboard players reset @e[type=zombie_horse] hydr_counter
 
 scoreboard objectives add sponge_counter trigger
 scoreboard players reset @e[type=zombie_horse] sponge_counter
+
+scoreboard objectives add cure_counter trigger
+scoreboard players reset @e[type=zombie_horse] cure_counter
 
 scoreboard objectives add stray_counter trigger
 scoreboard players reset @e[type=skeleton_horse] stray_counter

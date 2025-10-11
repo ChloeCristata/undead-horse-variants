@@ -1,0 +1,23 @@
+{
+  "criteria": {
+    "cure_zombie_horse": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:golden_carrot"
+          ]
+        },
+        "entity": {
+          "type": [
+            "minecraft:interaction"
+          ],
+          "nbt": "{Tags:[\"interact_uhv_cure\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "uhv:cure_zombie_horse"
+  }
+}

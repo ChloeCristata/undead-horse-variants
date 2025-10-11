@@ -20,27 +20,6 @@
           {
             "condition": "minecraft:random_chance",
             "chance": 0.0275
-          },
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "biomes": [
-                "minecraft:ocean",
-                "minecraft:warm_ocean",
-                "minecraft:lukewarm_ocean",
-                "minecraft:cold_ocean",
-                "minecraft:frozen_ocean",
-                "minecraft:deep_ocean",
-                "minecraft:deep_lukewarm_ocean",
-                "minecraft:deep_cold_ocean",
-                "minecraft:deep_frozen_ocean",
-                "minecraft:river",
-                "minecraft:frozen_river",
-                "minecraft:beach",
-                "minecraft:snowy_beach",
-                "minecraft:stony_shore"
-              ]
-            }
           }
         ]
       }
